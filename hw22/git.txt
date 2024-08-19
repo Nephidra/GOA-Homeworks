@@ -1,0 +1,5 @@
+git init - gits vtvirtavt chven fileshi
+git commit -m "first commit" - commits vaketeb versiis
+git branch -M main - branchs vqmnit
+git remote add origin (link) - veubnebit gits romel repositoryshi chasvas chveni filebi
+git push -u origin main - vpushavt githubze 
