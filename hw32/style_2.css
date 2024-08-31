@@ -1,0 +1,99 @@
+
+.korea {
+    background-image: url(images_2/seoul.jpg);
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    width: 300px;
+    height: 250px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.tbilisi {
+    background-image: url(images_2/tbilisi.jpg);
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    width: 300px;
+    height: 250px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.new_york {
+    background-image: url(images_2/newyork.jpg);
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    width: 300px;
+    height: 250px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.dubai {
+    background-image: url(images_2/dubai.jpg);
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    width: 300px;
+    height: 250px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.paris {
+    background-image: url(images_2/paris.jpg);
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    width: 300px;
+    height: 250px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.tokyo {
+    background-image: url(images_2/tokyo.jpg);
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    width: 300px;
+    height: 250px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+* {
+    color: white;
+}
+
+h1 {
+    margin: 0px;
+}
+
+p {
+    margin: 0px;
+}
+
+.section {
+    display: flex;
+}
