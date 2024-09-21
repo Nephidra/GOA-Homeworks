@@ -1,0 +1,13 @@
+#container {
+    background-color: red;
+    width: 150px;
+    height: 150px;
+}
+
+#container:hover {
+    transform: scale(2);
+}
+
+#container:active {
+    transform: scale(0.5);
+}

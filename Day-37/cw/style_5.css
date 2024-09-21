@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+div {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    transform: rotate(30deg);
+    transform: scale(2);
+}
