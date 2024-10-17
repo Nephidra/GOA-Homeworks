@@ -1,0 +1,61 @@
+body {
+    background-color: black;
+    display: flex;
+}
+
+* {
+    color: yellow;
+}
+
+header {
+    display: flex;
+}
+
+ul {
+    display: flex;
+    gap: 200px;
+    margin-left: 250px;
+    margin-top: 25px;
+}
+@media screen and (max-width: 2000px) {
+    .menu {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .nav {
+        gap: 150px;
+        margin-left: 100px;
+    }
+    .menu {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        margin-left: 75px;
+        gap: 100px;
+    }
+    .menu {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    ul {
+        visibility: hidden;
+        display: none;
+    }
+    .menu {
+        visibility: visible;
+    }
+}
+
+
+.button {
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+}
