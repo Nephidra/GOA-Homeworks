@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text</title>
+</head>
+<body>
+
+    <p id="paragraph">This is the original text.</p>
+    <button onclick="changeText(document.getElementById('paragraph'))">Change Text</button>
+
+    <script>
+        function changeText(element) {
+            element.innerText = 'This is the new text!';  // Changes the text content
+        }
+    </script>
+
+</body>
+</html>
