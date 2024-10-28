@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .shape {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Square */
+  .square {
+    background-color: pink;
+  }
+  
+  /* Circle */
+  .circle {
+    background-color: orange;
+    border-radius: 50%;
+  }
+  
+  /* Rectangle */
+  .rectangle {
+    background-color: teal;
+    width: 150px;
+  }
+  
+  /* Triangle */
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid skyblue;
+  }
+  
+  /* Pentagon */
+  .pentagon {
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    background-color: lime;
+    position: relative;
+    top: -20px;
+  }
+
+  
+  /* Oval */
+  .oval {
+    background-color: peachpuff;
+    border-radius: 50%;
+    width: 150px;
+  }
+  
+  /* Star */
+  .star {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background-color: lightgray;
+    position: relative;
+  }
+  
+  /* Crescent */
+  .crescent {
+    background-color: coral;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: relative;
+  }
+  
+  .crescent:before {
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 25px;
+  }
