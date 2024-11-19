@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML ელემენტის კონსოლში გამოტანა</title>
+</head>
+<body>
+
+    <h1 id="header">satauri</h1>
+    <p id="paragraph">paragrafi</p>
+    <button onclick="logElement(document.getElementById('header'))">gamotana consoleshi h1</button>
+    <button onclick="logElement(document.getElementById('paragraph'))">gamotana consoleshi p</button>
+
+    <script>
+        // ფუნქცია, რომელიც მიიღებს HTML ელემენტს და გამოიტანს კონსოლში
+        function logElement(element) {
+            console.log(element);  // აქ გამოიტანება მთელი ელემენტი
+            console.log(element.innerHTML);  // აქ გამოიტანება მხოლოდ ელემენტის შიგთავსი (text content)
+        }
+    </script>
+
+</body>
+</html>
