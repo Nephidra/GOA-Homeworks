@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookie Clicker</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+
+    <div class="container">
+        <h2>Cookie Clicker</h2>
+        <div>
+            <h3>Score: <span id="score">0</span></h3>
+        </div>
+        <div>
+            <img src="cookie.jpg" alt="Cookie" id="cookie" />
+        </div>
+    </div>
+
+    <script>
+        let score = 0;
+let pointsPerClick = 1;
+
+const scoreElement = document.getElementById('score');
+const pointsPerClickElement = document.getElementById('pointsPerClick');
+const cookieElement = document.getElementById('cookie');
+
+
+cookieElement.addEventListener('click', () => {
+  score += pointsPerClick;
+  scoreElement.textContent = score;
+  pointsPerClick = Math.pow(2, Math.floor(score / 100));
+  pointsPerClickElement.textContent = pointsPerClick;
+
+  cookieElement.classList.add('shake');
+        setTimeout(() => {
+        cookieElement.classList.remove('shake');
+    }, 200);
+    });
+
+    </script>
+</body>
+</html>

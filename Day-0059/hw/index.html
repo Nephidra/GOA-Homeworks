@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>რეგისტრაციის ფორმა</h1>
+    <form id="registrationForm">
+        <div class="form-group">
+            <label for="firstName">სახელი:</label><br>
+            <input type="text" id="firstName" name="firstName">
+        </div>
+        <div class="form-group">
+            <label for="lastName">გვარი:</label><br>
+            <input type="text" id="lastName" name="lastName">
+        </div>
+        <div class="form-group">
+            <label for="email">ელფოსტა:</label><br>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="password">პაროლი:</label><br>
+            <input type="password" id="password" name="password">
+        </div>
+        <div class="form-group">
+            <label>
+                <input type="checkbox" id="terms" name="terms"> ეთანხმებით "წესებს და პირობებს"
+            </label>
+        </div>
+        <button type="button" id="submitButton">დადასტურება</button>
+        <p class="error" id="errorMessage" style="display: none;">გთხოვთ, შეავსოთ ყველა ველი.</p>
+    </form>
+
+    <script>
+        document.getElementById('submitButton').addEventListener('click', function () {
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const terms = document.getElementById('terms').checked;
+            const errorMessage = document.getElementById('errorMessage');
+
+            if (!firstName || !lastName || !email || !password || !terms) {
+                errorMessage.style.display = 'block';
+            } else {
+                errorMessage.style.display = 'none';
+                console.log('სახელი:', firstName);
+                console.log('გვარი:', lastName);
+                console.log('ელფოსტა:', email);
+                console.log('პაროლი:', password);
+                console.log('ეთანხმება "წესებს და პირობებს":', terms);
+            }
+        });
+    </script>
+</body>
+</html>
