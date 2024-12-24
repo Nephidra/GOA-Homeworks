@@ -1,0 +1,11 @@
+def is_anagram(test, original) funqcias vqmnit
+    if len(test) != len(original) vamowmebt tu igive sigrdzisaa ro tu araa mash anagrama ver iqneba
+        return False
+
+    joined = (test + original).lower() valowerebt yvelafers
+
+    for char in joined
+        if joined.count(char) % 2 != 0 vitvlit ramdeni asoa stringshi da tu kentia mash vabrunebt flases
+            return False
+
+    return True

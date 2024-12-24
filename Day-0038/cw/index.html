@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ანიმაცია</title>
+    <style>
+        .animated-div {
+            width: 500px; /* სიგანე 500 პიქსელი */
+            height: 500px; /* სიმაღლე 500 პიქსელი */
+            background-color: green; /* საწყისი უკანა ფერი მწვანე */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 1s ease-in-out, transform 0.5s ease; 
+            /*
+                transition: 
+                1. background-color 1s ease-in-out - უკანა ფერის ცვლილებას აქვს 1 წამი, სიჩქარის ღერძი ease-in-out - ნელი დასაწყისი და დასასრული.
+                2. transform 0.5s ease - ტრანსფორმაციის დროს იქნება 0.5 წამი, სადაც სიჩქარის ღერძი არის ease - ნელი დასაწყისი.
+            */
+        }
+
+        .animated-div:hover {
+            background-color: blue; /* მაუსის შეხებისას ფერი ლურჯად შეიცვლება */
+            transform: rotate(20deg) scale(1.1); 
+            /* 
+                1. rotate(20deg) - დივი 20 გრადუსით მოიტრიალებს.
+                2. scale(1.1) - დივი 1.1-ჯერ გაიზრდება.
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-div">
+        აირჩიეთ
+    </div>
+</body>
+</html>
