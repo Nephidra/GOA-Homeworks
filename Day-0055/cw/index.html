@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>მომხმარებლის ინფორმაცია</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        #message {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>მომხმარებლის მონაცემები</h1>
+
+    <form id="userForm">
+        <input type="text" id="firstName" placeholder="შეიყვანეთ სახელი" required>
+        <input type="text" id="lastName" placeholder="შეიყვანეთ გვარი" required>
+        <input type="number" id="age" placeholder="შეიყვანეთ ასაკი" required>
+
+        <button type="button" onclick="showInfo()">დამიკლიკე</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        function showInfo() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const age = parseInt(document.getElementById('age').value);
+
+            let message;
+            if (age >= 18) {
+                message = `გამარჯობა, ${firstName} ${lastName}! თქვენ სრულწლოვანი ხართ.`;
+            } else {
+                message = `გამარჯობა, ${firstName} ${lastName}! თქვენ არ შეგიძლიათ გამოიყენოთ ეს პროგრამა, რადგან არ ხართ სრულწლოვანი.`;
+            }
+
+            document.getElementById('message').textContent = message;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Toggle with Transition</title>
+  <style>
+    .container {
+      text-align: center;
+      margin-top: 50px;
+      font-family: Arial, sans-serif;
+    }
+
+    .text {
+      font-size: 24px;
+      margin-bottom: 20px;
+      transition: opacity 0.5s ease;
+    }
+
+    .hidden {
+      opacity: 0;
+    }
+
+    .visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="text visible">გამარჯობა</div>
+    <button id="toggle-btn">ღილაკი</button>
+  </div>
+
+  <script>
+    let isHello = true;
+
+    document.getElementById('toggle-btn').addEventListener('click', function () {
+      const textDiv = document.querySelector('.text');
+
+      if (isHello) {
+        textDiv.classList.remove('visible');
+        textDiv.classList.add('hidden');
+        
+        setTimeout(() => {
+          textDiv.textContent = 'ნახვამდის';
+          textDiv.classList.remove('hidden');
+          textDiv.classList.add('visible');
+        }, 500);
+      } else {
+        textDiv.classList.remove('visible');
+        textDiv.classList.add('hidden');
+        
+        setTimeout(() => {
+          textDiv.textContent = 'გამარჯობა';
+          textDiv.classList.remove('hidden');
+          textDiv.classList.add('visible');
+        }, 500);
+      }
+      isHello = !isHello;
+    });
+  </script>
+</body>
+</html>

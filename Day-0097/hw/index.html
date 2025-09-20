@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      transition: background-color 0.3s ease;
+    }
+    label, input {
+      display: block;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>registation</h2>
+  <form id="regForm">
+    <label for="age">asaki:</label>
+    <input type="number" id="age" name="age" min="0" required>
+  </form>
+
+  <script>
+    const ageInput = document.getElementById('age');
+
+    ageInput.addEventListener('input', function() {
+      const age = parseInt(ageInput.value, 10);
+
+      if (isNaN(age)) {
+        document.body.style.backgroundColor = '';
+        return;
+      }
+
+      if (age >= 18) {
+        document.body.style.backgroundColor = 'green';
+      } else {
+        document.body.style.backgroundColor = 'red';
+      }
+    });
+  </script>
+</body>
+</html>

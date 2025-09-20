@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>მომხმარებლის პრეფერენციები</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>პრეფერენციების არჩევა</h1>
+
+    <script>
+        function askPreferences() {
+            const wantsDarkScreen = confirm("გსურთ შავი ეკრანი?");
+            const wantsLargeText = confirm("გსურთ დიდი ტექსტი?");
+            const wantsLongText = confirm("გსურთ გრძელი ტექსტი?");
+
+            if (wantsDarkScreen) {
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+            }
+
+            if (wantsLargeText) {
+                document.body.style.fontSize = "20px";
+            }
+
+            if (wantsLongText) {
+                const longText = document.createElement("p");
+                longText.textContent = "ეს არის გრძელი ტექსტის მაგალითი. გთხოვთ, გაითვალისწინოთ ცვლილებები საიტზე.";
+                document.body.appendChild(longText);
+            }
+        }
+
+        askPreferences();
+    </script>
+</body>
+</html>

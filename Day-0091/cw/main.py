@@ -1,0 +1,10 @@
+print(ord("A"))
+print(ord("B"))
+# print(ord("C"))
+# print(ord("ა"))
+# print(ord("ბ"))
+
+print(chr(65))
+print(chr(66))
+print(chr(ord("ა")))
+print(chr(64))

@@ -1,0 +1,23 @@
+:root {
+    --main-color: red;
+}
+
+#one {
+    background-color: var(--main-color);
+    width: 100px;
+    height: 100px;
+}
+
+#two {
+    background-color: var(--main-color);
+    width: 100px;
+    height: 100px;
+}
+
+#three {
+    background-color: var(--main-color);
+    width: 100px;
+    height: 100px;
+}
+
+/* Root shegvilia agvwerot adgili sadac shegvilia shevinaxot cvladebi magalitad "red" da shemdegshi rames gavuwerot*/

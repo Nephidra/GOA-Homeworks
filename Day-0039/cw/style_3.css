@@ -1,0 +1,11 @@
+.div {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+.div:hover {
+    transform: rotate(30deg);   
+    -webkit-transform: rotate(90deg);
+}
+

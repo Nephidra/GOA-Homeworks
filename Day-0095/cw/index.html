@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        .div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: opacity 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="div"></div>
+    <script>
+        const div = document.querySelector(".div");
+        function click() {
+            div.style.opacity = "0";
+            div.removeEventListener("click", click);
+            setTimeout(() => {
+                div.style.opacity = "1";
+                setTimeout(() => {
+                    div.addEventListener("click", click);
+                }, 1000);
+            }, 2000);
+        }
+        div.addEventListener("click", click);
+    </script>
+</body>
+</html>

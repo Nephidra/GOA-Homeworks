@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <label for="numbers">enter numbers</label>
+    <input type="text" id="numbers">
+    <button onclick="calculateSum()">calc sum</button>
+    <p id="result"></p>
+    <script>
+        function calculateSum() {
+            let input = document.getElementById("numbers").value;
+            let numbers = input.split(",");
+            let sum = 0;
+
+            numbers.forEach(num => {
+                let parsedNum = parseFloat(num);
+                if (!isNaN(parsedNum)) { 
+                    sum += parsedNum;
+                }
+            });
+
+            document.getElementById("result").innerText = "calced " + sum;
+        }
+    </script>
+</body>
+</html>

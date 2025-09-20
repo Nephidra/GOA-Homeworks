@@ -1,0 +1,12 @@
+a:visited {
+    color: yellow;
+}
+
+a:active {
+    color: brown;
+}
+
+button:hover {
+    background-color: black;
+    color: yellow;
+}

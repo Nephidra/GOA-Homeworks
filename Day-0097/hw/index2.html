@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .dark-theme {
+      background-color: #1e1e1e;
+      color: white;
+    }
+
+    .light-theme {
+      background-color: white;
+      color: black;
+    }
+  </style>
+</head>
+<body class="light-theme">
+
+  <button id="themeToggle">change theme</button>
+
+  <script>
+    const body = document.body;
+    const themeToggleBtn = document.getElementById('themeToggle');
+
+    themeToggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-theme');
+      body.classList.toggle('light-theme');
+    });
+  </script>
+
+</body>
+</html>

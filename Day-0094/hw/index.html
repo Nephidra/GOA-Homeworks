@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    .container {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .child {
+      width: 100px;
+      height: 100px;
+      background-color: lightgray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="parent">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+  </div>
+
+  <input type="number" id="childIndex" placeholder="ricxvi 1-4" min="1" max="4" />
+  <button onclick="highlightChild()">change color</button>
+
+  <script>
+    function highlightChild() {
+      const index = parseInt(document.getElementById("childIndex").value);
+      const children = document.querySelectorAll(".container .child");
+      children.forEach(child => child.style.backgroundColor = "lightgray");
+      if (index >= 1 && index <= children.length) {
+        children[index - 1].style.backgroundColor = "lightgreen";
+      } else {
+        alert("sheiyvanet ricxvi 1-4");
+      }
+    }
+  </script>
+</body>
+</html>

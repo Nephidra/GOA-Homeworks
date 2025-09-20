@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charet="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>int or char</title>
+</head>
+<body>
+    <label>
+        <input type="radio" name="mode" id="number" checked> int
+    </label>
+    <label>
+        <input type="radio" name="mode" id="letter"> char
+    </label>
+    <button id="startBtn">start</button>
+    <button id="stopBtn">stop</button>
+    <br>
+    <div id="output"></div>
+
+    <script>
+        let interval;
+        const output = document.getElementById('output');
+        const starti = document.getElementById('startBtn');
+        const stopi = document.getElementById('stopBtn');
+        const numberRadio = document.getElementById('number');
+        const letterRadio = document.getElementById('letter');
+
+        starti.onclick = function() {
+
+            interval = setInterval(function() {
+                if (numberRadio.checked) {
+                    output.textContent = Math.floor(Math.random() * 100) + 1;
+                } else if (letterRadio.checked) {
+                    const alphabet = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
+                    output.textContent = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                }
+            }, 1000);
+        };
+
+        stopi.onclick = function() {
+            clearInterval(interval);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+/* <div class="container">
+  <div class="box">
+    <div class="circle"></div>
+  </div>
+  <div class="box center">
+    <div class="circle"></div>
+  </div>
+  <div class="box">
+    <div class="circle"></div>
+  </div>
+</div>
+
+
+<style> */
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4A9A86;
+  }
+  .container {
+    display: flex;
+    gap: 20px;
+  }
+
+  .box {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4C4C6B;
+  }
+  .box.center {
+    background: #FAE29E;
+  }
+  .circle {
+    height: 40px;
+    width: 40px;
+    border-radius : 50%;
+    background: #FAE29E;
+  }
+  .box.center .circle {
+    background: #4C4C6B;
+  }
+/* </style> */

@@ -1,0 +1,28 @@
+img {
+    width: 20%;
+    animation-name: beat;
+    animation-duration: 1s;
+    animation: beat 1s linear infinite;
+}
+
+@keyframes beat {
+    0% {
+        width: 20%;
+    }
+
+    25% {
+        width: 25%;
+    }
+
+    50% {
+        width: 30%;
+    }
+
+    75% {
+        width: 25%;
+    }
+
+    100% {
+        width: 20%;
+    }
+}

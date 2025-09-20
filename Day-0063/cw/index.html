@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <main>
+            <div class="inputs">
+                <div id="counter">0</div>
+            </div>
+            <div class="inputs">
+                <label>Value to Increment: </label>
+                <input type="number" id="incrementValue" value="1" />
+            </div>
+            <div class="inputs">
+                <label>Value to Decrement: </label>
+                <input type="number" id="decrementValue" value="1" />
+            </div>
+          
+            <div class="buttons">
+                <button onclick="increment()">+</button>
+                <button onclick="decrement()">-</button>
+                <button onclick="resetCounter()">R</button>
+            </div>
+        </main>
+
+    <script>
+        let counter = 0;
+
+        let counterElement = document.getElementById('counter');
+
+        function updateCounter() {
+        counterElement.textContent = counter;
+        if (counter > 0) {
+            counterElement.style.color = 'green';
+        } else if (counter < 0) {
+            counterElement.style.color = 'red';
+        } else {
+            counterElement.style.color = 'black';
+        }
+        }
+
+        function increment() {
+        let incrementValue = parseInt(document.getElementById('incrementValue').value);
+        counter += incrementValue;
+        updateCounter();
+        }
+
+        function decrement() {
+        let decrementValue = parseInt(document.getElementById('decrementValue').value);
+          counter -= decrementValue;
+         updateCounter();
+      }
+
+       function resetCounter() {
+         counter = 0;
+        updateCounter();
+      }
+    </script>
+    </body>
+</html>

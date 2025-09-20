@@ -1,0 +1,51 @@
+* {
+    color: yellow;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head-class {
+    background-color: black;
+    position: fixed;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 5px solid black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+button {
+    background-color: black;
+    border: none;
+    margin-left: 30px;
+}
+
+button:hover {
+    background-color: yellow;
+    color: black;   
+}
+
+.child {
+    padding-top: 68px;
+}

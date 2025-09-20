@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .wrapper {
+      margin: 20px;
+    }
+    p {
+      font-size: 18px;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper" id="div">
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+  </div>
+
+  <button onclick="makeFirstRed()">change color</button>
+
+  <script>
+    function makeFirstRed() {
+      const container = document.getElementById("div");
+      const firstParagraph = container.children[0];
+      firstParagraph.style.color = "red";
+    }
+  </script>
+</body>
+</html>
