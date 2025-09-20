@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #animatedDiv {
+      width: 200px;
+      height: 200px;
+      background-color: #3498db;
+      border-radius: 20px;
+      transition: all 1s ease;
+      margin: 100px auto;
+    }
+  </style>
+</head>
+<body>
+
+<div id="animatedDiv"></div>
+
+<script>
+  const div = document.getElementById("animatedDiv");
+
+  function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  function getRandomRadius() {
+    return Math.floor(Math.random() * 101) + "px";
+  }
+
+  function updateStyles() {
+    div.style.backgroundColor = getRandomColor();
+    div.style.borderRadius = getRandomRadius();
+  }
+
+  setInterval(updateStyles, 5000);
+</script>
+
+</body>
+</html>

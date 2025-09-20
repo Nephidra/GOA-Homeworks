@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missions List</title>
+    <style>
+        #container {
+            width: 300px;
+            height: 500px;
+            border: 1px solid black;
+            overflow: auto;
+            margin-top: 10px;
+        }
+        .mission {
+            padding: 10px;
+            border-bottom: 1px solid gray;
+        }
+        .square, .circle {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            display: inline-block;
+        }
+        .square {
+            background-color: red;
+        }
+        .circle {
+            background-color: blue;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" id="missionInput" placeholder="Enter a number">
+    <button id="addMission">Add Mission</button>
+    <div id="container"></div>
+    
+    <script>
+        const container = document.getElementById("container");
+        const input = document.getElementById("missionInput");
+        const button = document.getElementById("addMission");
+
+        button.addEventListener("click", () => {
+            const value = parseInt(input.value);
+            if (!isNaN(value)) {
+                const mission = document.createElement("div");
+                mission.className = "mission";
+                mission.textContent = value;
+                
+                if (value > 20) {
+                    container.appendChild(mission);
+                } else {
+                    container.insertBefore(mission, container.firstChild);
+                }
+                
+                const shape = document.createElement("div");
+                if (value % 2 === 0) {
+                    shape.className = "circle";
+                    container.appendChild(shape);
+                } else {
+                    shape.className = "square";
+                    container.insertBefore(shape, container.firstChild);
+                }
+                
+                input.value = "";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <label for="textInput">text </label>
+    <input type="text" id="text">
+
+    <label for="repeatInput">repeat </label>
+    <input type="number" id="x" min="1">
+
+    <button onclick="repeatText()">repeat</button>
+
+    <script>
+        function repeatText() {
+            let text = document.getElementById("text").value;
+            let x = parseInt(document.getElementById("x").value);
+
+            let result = text.repeat(x);
+            console.log(result);
+        }
+    </script>
+
+</body>
+</html>

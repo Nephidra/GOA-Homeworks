@@ -1,0 +1,21 @@
+/* <div></div>
+<div b></div> */
+/* <style> */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2F5A76;
+  }
+  div {
+    position: absolute;
+    width: 120px;
+    height: 190px;
+    border: solid 20px #F3AC3C;
+  }
+  [b] {
+    width: 300px;
+    height: 0px;
+    border-width: 30px;
+  }
+/* </style> */

@@ -1,0 +1,25 @@
+/* <div c></div>
+<div></div>
+<div b></div>
+<style> */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #B8F4A6;
+  }
+  div {
+    width: 50px;
+    height: 200px;
+    background: #B8F4A6;
+    position: absolute;
+  }
+  [b] {
+    rotate: 90deg;
+  }
+  [c] {
+    background: #3BA44D;
+    width: 200px;
+    border-radius: 100%;
+  }
+/* </style> */

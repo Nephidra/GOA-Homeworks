@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: inline-block;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box1" class="box">box 1</div>
+    <div id="box2" class="box">box 2</div>
+
+    <div class="box">box 3</div>
+    <div class="box">box 4</div>
+
+    <p>p 1</p>
+    <p>p 2</p>
+
+    <button onclick="changeContent()">content</button>
+    <button onclick="changeStyle()">style</button>
+
+    <script>
+        function changeContent() {
+            let box1 = document.getElementById("box1");
+            box1.innerHTML = "Upd Box 1";
+            
+            let box2 = document.getElementById("box2");
+            box2.innerHTML = "Upd Box 2";
+        }
+
+        function changeContentByClass() {
+            let boxes = document.getElementsByClassName("box");
+            for (let i = 0; i < boxes.length; i++) {
+                boxes[i].innerHTML = "Upd Box " + (i + 1);
+            }
+        }
+
+        function changeContentByTag() {
+            let paragraphs = document.getElementsByTagName("p");
+            for (let i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].innerHTML = "Upd paragraph " + (i + 1);
+            }
+        }
+
+        function changeStyle() {
+            let box1 = document.getElementById("box1");
+            box1.style.backgroundColor = "pink";
+            box1.style.width = "200px";
+            
+            let box2 = document.getElementById("box2");
+            box2.style.backgroundColor = "lightgreen";
+            box2.style.height = "150px";
+        }
+    </script>
+</body>
+</html>
