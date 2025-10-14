@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>save</h1>
+    <button onclick="saveArray()">saev</button>
+    <button onclick="getArray()">get</button>
+
+    <h1>save</h1>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <input type="number" id="num3">
+    <button onclick="saveNumbers()">saev</button>
+    <button onclick="getNumbers()">get</button>
+
+    <script>
+        function saveArray() {
+            const arr = [1, 2, 3, 4, 5]
+            localStorage.setItem("Array", JSON.stringify(arr))
+            console.log("saved array")
+        }
+
+        function getArray() {
+            const arr = JSON.parse(localStorage.getItem("Array"))
+            console.log(arr)
+        }
+
+        function saveNumbers() {
+            const n1 = Number(document.getElementById("num1").value)
+            const n2 = Number(document.getElementById("num2").value)
+            const n3 = Number(document.getElementById("num3").value)
+            const nums = [n1, n2, n3];
+            localStorage.setItem("numbers", JSON.stringify(nums))
+            console.log("saved numbers")
+        }
+
+        function getNumbers() {
+            const saved = JSON.parse(localStorage.getItem("numbers"))
+            console.log(saved)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="fetchImageBtn">img</button>
+    <div id="imageContainer"></div>
+
+    <script>
+    document.getElementById('fetchImageBtn').addEventListener('click', () => {
+    fetch('https://jsonplaceholder.typicode.com/photos/1')
+    .then(res => res.json())
+    .then(photo => {
+        document.getElementById('imageContainer').innerHTML = `
+            <img src="${photo.url}" alt="${photo.title}" width="300">
+        `;
+    })
+    });
+    </script>
+
+</body>
+</html>
